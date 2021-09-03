@@ -11,6 +11,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <title>My Favorite Books!</title>
+
+    <link rel="stylesheet" href="style.css">
+
   </head>
   <body>
     <h1>Check out these great books!</h1>
@@ -178,21 +181,43 @@
 
 
 <form>
-  <div class="container">
-    <div class="row">
-
-    <div class="col" class="form-group">
-      <label form="exampleFormControlInput1">Publication Date</label>
-      <select class="form-control">
-        <option>Select Year</option>
-      </select>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Title">
     </div>
-    <div class="col" class="form-group">
-      <label for="exampleFormControlInput1">Publisher</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Book Publisher">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Author">
+    </div>
   </div>
+</form>
 
-</div>
+<br></br>
 
-  </form>
+<form>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Year Published">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Publisher">
+    </div>
+  </div>
+</form>
+
+<br></br>
+
+<form>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Page Count">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Price">
+    </div>
+  </div>
+</form>
+
+<button type="button" class="btn btn-primary">Add a New Book</button>
+
+
 </html>
