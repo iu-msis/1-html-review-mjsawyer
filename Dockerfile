@@ -5,4 +5,3 @@ LABEL maintainer="Tom Gregory"
 COPY app /srv/app
 
 COPY docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
-© 2021 GitHub, Inc.
