@@ -58,6 +58,7 @@
 <body>
   <div class="container" border="1">
   <div class="row">
+    <table id="table1">
     <div class="col">
       <b>Title</b>
     </div>
@@ -215,9 +216,14 @@
       <input type="text" class="form-control" placeholder="Price">
     </div>
   </div>
+</table>
 </form>
 
 <button type="button" class="btn btn-primary">Add a New Book</button>
-
+<script src="java/tablesort.mini.js"></script>
+  <script>
+  /**Table Sort From https://github.com/tristen/tablesort/blob/gh-pages/dist/tablesort.min.js **/
+    new Tablesort(document.getElementById('table1'));
+  </script>
 
 </html>
