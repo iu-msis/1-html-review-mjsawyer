@@ -1,27 +1,37 @@
-const Offer = {
-  data() {
-    return {
-      "offers": [
-        {
-          "id": 1,
-          "name": "Jordan Doe",
-          "salary": 120000,
-          "bonus": 9000,
-          "company": "EY",
-          "offerDate": "2021-10-12"
-        },
-        {
-          "id": 2,
-          "name": "Jesse Doe",
-          "salary": 90000,
-          "bonus": 2000,
-          "company": "IU",
-          "offerDate": "2021-10-12"
+
+const SomeApp = {
+    data() {
+      return {
+        result: {},
+        list: [5,6,7,8],
+        message: "Waiting ..."
+      }
+    },
+    computed: {
+        prettyBirthday() {
+            return dayjs(this.result.dob.date)
+            .format('D MMM YYYY')
         }
-      ]
+    },
+    methods: {
+        fetchUserData() {
+            //Method 1:
+            fetch('https://randomuser.me/api/')
+            .then(response => response.json())
+            .then((json) => {
+                console.log("Got json back:", json);
+                this.result = json.results[0];
+                console.log("C");
+            })
+            .catch( (error) => {
+                console.error(error);
+            });
+        }
+    },
+    created() {
+        this.fetchUserData();
     }
 
   }
-}
 
-Vue.createApp(Offer).mount('#offerApp')
+  Vue.createApp(SomeApp).mount('#someApp');
