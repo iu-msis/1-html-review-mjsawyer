@@ -85,17 +85,23 @@
 
           <div class="col col-8" id="someApp">
             <h1>{{ result.name.first }} {{ result.name.last }}</h1>
-            <a v-bind:href="result.picture.large" target="_blank"></a>
-              <img v-bind:src ="result.picture.large" width"350" height = "350"> </img>
+
+            <a v-bind:href="result.picture.large" target = "_blank">
+              <img v-bind:src ="result.picture.large" width = "350" height = "350"> </img></a>
             <img v-bind:href="result.picture.thumbnail"></img>
 
             <p>{{ result.location.country }}</p>
             <p>{{ prettyBirthday }}</p>
             <p>{{ result.dob.age }}</p>
-            <p><a v-bind:href"'mailto:' + result.email">{{result.email }}</a></p>
+            <p><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
           </div>
         </div>
+      </div>
+    </div>
 
+
+<script src="https://unpkg.com/vue@next"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 <script src="java/index.js"></script>
 </body>
 </html>
