@@ -65,34 +65,31 @@
     <img alt="Profile" src="img/randompic2.jpg"
     width="250" height="250"></a>
 
-    <br></br>
-
-
-    <!---<div id ="offerApp" class="col col-8">
-      <p>{{ foo }}</p>
-      <p>{{ msg }}</P>
-      <p>{{ list }}</p>
-    </div> ---->
+<hr>
 
 <h3>Please feel free to use the navigation bar above.</h3></p>
 
+<hr>
+
+<h3>Lets check out some new users!</h3>
+<p></p>
 
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-          <br>
-          <hr>
+
+          <!-- <hr> -->
 
           <div class="col col-8" id="someApp">
             <h1>{{ result.name.first }} {{ result.name.last }}</h1>
 
             <a v-bind:href="result.picture.large" target = "_blank">
               <img v-bind:src ="result.picture.large" width = "350" height = "350"> </img></a>
-            <img v-bind:href="result.picture.thumbnail"></img>
+        <!--    <img v-bind:href="result.picture.thumbnail"></img> -->
 
-            <p>{{ result.location.country }}</p>
-            <p>{{ prettyBirthday }}</p>
-            <p>{{ result.dob.age }}</p>
+            <p class="description">Country: {{ result.location.country }}</p>
+            <p class="description">Birthday: {{ prettyBirthday }}</p>
+            <p class="description">Age: {{ result.dob.age }}</p>
             <p><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
           </div>
         </div>
