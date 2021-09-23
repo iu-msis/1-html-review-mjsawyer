@@ -91,6 +91,11 @@
             <p class="description">Birthday: {{ prettyBirthday }}</p>
             <p class="description">Age: {{ result.dob.age }}</p>
             <p><a v-bind:href="'mailto:' + result.email">{{ result.email }}</a></p>
+
+            <form v-on:submit.prevent="fetchUserData">
+              <button type="submit">Refresh</button>
+            </form>
+            
           </div>
         </div>
       </div>
