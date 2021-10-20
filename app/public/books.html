@@ -1,5 +1,4 @@
-<!doctype html>
-<html>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,6 +12,7 @@
     <title>My Favorite Books!</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
 
   </head>
   <body>
@@ -51,13 +51,11 @@
     </div>
   </div>
 </nav>
-<head>
-  <title>My Page Title</title>
-  <link rel="stylesheet" href="/css/site.css">
-</head>
+
 <body>
 
 <table id="table1">
+  <thead>
   <tr>
     <th>Title</th>
     <th>Author(s)</th>
@@ -66,6 +64,8 @@
     <th>Page Count</th>
     <th>MSRP</th>
   </tr>
+</thead>
+
   <tr>
     <td>The Goblet of Fire</td>
     <td>J. K. Rowling</td>
@@ -152,11 +152,135 @@
 </form>
 
 <button type="button" class="btn btn-primary">Add a New Book</button>
-<script src="java/tablesort.min.js"></script>
 
-  <script>
-  /**Table Sort From https://github.com/tristen/tablesort/blob/gh-pages/dist/tablesort.min.js **/
-    new Tablesort(document.getElementById('table1'));
-  </script>
+<hr>
+<hr>
 
-</html>
+
+
+
+
+<h2>This is my Homework #6 below!</h2>
+
+<!--<div id="offerApp" class="container">
+       <div class="row align-items-start">
+         <div class="col col-4"> --!>
+           <!-- <p>Profile information for {{ person.name.first }}</p> -->
+          <!-- <div v-for="s in students" v-on:click="selectStudent(s)"
+            :class="['student', {selected: selectedStudent && s.id == selectedStudent.id}]">
+             <span class="userName">{{ s.username }}</span><br>
+             <span class="studentName">{{ s.name }}</span>
+           </div>
+         </div> -->
+
+
+         <div id="someApp" class="container">
+                 <div class="row align-items-start">
+                 </div>
+                 <table id="tablebooks" class="table">
+                     <thead class="tabhead">
+                         <tr>
+                            <!-- <th scope="col">Book ID</th> -->
+                             <th scope="col">Title</th>
+                             <th scope="col">Author</th>
+                             <th scope="col">Year</th>
+                             <th scope="col">Publisher</th>
+                             <th scope="col">Page</th>
+                             <th scope="col">MSRP</th>
+                           </tr>
+                     </thead>
+                     <tbody>
+                       <tr v-for="book in books">
+                        <!-- <td>{{ book.id }}</td> -->
+                         <td>{{ book.title }}</td>
+                         <td>{{ book.author }}</td>
+                         <td>{{ book.year }}</td>
+                         <td>{{ book.publisher }}</td>
+                         <td>{{ book.page }}</td>
+                         <td>{{ prettyDollar(book.msrp) }}</td>
+                         <td></td>
+                         <td>
+                           <button type="button" class="btn-outline-secondary btn-sm">Edit</button>
+                           </td>
+
+                     </tr>
+                     </tbody>
+                 </table>
+
+                 <form v-on:submit.prevent="postNewBook">
+                   <div class="mb-3">
+                     <label for="title" class="form-label">Title</label>
+                     <input type="text" v-model="bookForm.title" class="form-control" id="title">
+                   </div>
+                  <div class="mb-3">
+                    <label for="auth" class="form-label">Author</label>
+                    <input type="text"v-model="bookForm.author" class="form-control" id="auth">
+                  </div>
+                  <div class="mb-3">
+                    <label for="published" class="form-label">Year Published</label>
+                    <input type="number"v-model="bookForm.year" class="form-control" id="published">
+                  </div>
+                  <div class="mb-3">
+                    <label for="publisher" class="form-label">Publisher</label>
+                    <input type="text"v-model="bookForm.publisher" class="form-control" id="publisher">
+                  </div>
+                  <div class="mb-3">
+                    <label for="pages" class="form-label">Number of Pages</label>
+                    <input type="number"v-model="bookForm.page" class="form-control" id="pages">
+                  </div>
+                  <div class="mb-3">
+                    <label for="msrp" class="form-label">MSRP</label>
+                    <input type="number" step="0.01" v-model="bookForm.msrp" class="form-control" id="msrp">
+                  </div>
+                  <button type="submit" class="btn btn-primary but">Submit</button>
+                </form>
+              </div>
+                 <!-- <form>
+                     <div class="mb-3">
+                         <label for="title" class="form-label">Title</label>
+                         <input type="text" v-model="bookForm.title" class="form-control" id="title">
+                     </div>
+                     <div class="mb-3">
+                         <label for="auth" class="form-label">Author</label>
+                         <input type="text" v-model="bookForm.author" class="form-control" id="auth">
+                     </div>
+                     <div class="mb-3">
+                         <label for="published" class="form-label">Year</label>
+                         <input type="number" v-model="bookForm.year" class="form-control" id="published">
+                     </div>
+                     <div class="mb-3">
+                         <label for="publisher" class="form-label">Publisher</label>
+                         <input type="text" v-model="bookForm.publisher" class="form-control" id="publisher">
+                     </div>
+                     <div class="mb-3">
+                         <label for="pages" class="form-label">Page</label>
+                         <input type="number" v-model="bookForm.page" class="form-control" id="pages">
+                     </div>
+                     <div class="mb-3">
+                         <label for="msrp" class="form-label">msrp</label>
+                         <input type="number" v-model="bookForm.msrp" class="form-control" id="msrp">
+                     </div>
+                     <button type="submit" class="btn btn-primary but">Submit</button>
+                 </form>
+               </div> -->
+           <!-- Optional JavaScript; choose one of the two! -->
+
+             <!-- Option 1: Bootstrap Bundle with Popper -->
+             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+             <!-- Option 2: Separate Popper and Bootstrap JS -->
+             <!--
+             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+             -->
+           <script src="java/tablesort_min.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+           <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
+           <script src="java/index_books.js"></script>
+           <!-- Tablesort script from http://tristen.ca/tablesort/demo/-->
+           <script>
+              new Tablesort(document.getElementById('tablebooks'));
+           </script>
+         </body>
+         </html>

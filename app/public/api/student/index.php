@@ -2,11 +2,13 @@
 // require 'common.php';
 require 'class/DbConnection.php';
 
+// echo getenv('MYSQL_DATABASE');
+
 // Step 1: Get a datase connection from our helper class
 $db = DbConnection::getConnection();
 
-echo $db;
-exit;
+// echo $db;
+// exit;
 
 // Step 2: Create & run the query
 $sql = 'SELECT * FROM student';
